@@ -27,13 +27,18 @@
         </activity>
 
         <!-- Statically Registered Broadcast Receivers-->
-        <receiver android:name=".OrderedReceiver2"
+
+        <!-- If set export=false, only this app can receive the broadcast -->
+        <!-- Can also set custom permission="some.custom.permission.name" to restrict apps -->
+        <receiver
+                android:name=".OrderedReceiver2"
                 android:exported="true">
             <intent-filter android:priority="2">
                 <action android:name="com.realityexpander.EXAMPLE_ACTION" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".OrderedReceiver3"
+        <receiver
+                android:name=".OrderedReceiver3"
                 android:exported="true">
         <!-- Higher priority value means it will be executed before other receivers with lower priority.-->
             <intent-filter android:priority="3">

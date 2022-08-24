@@ -4,6 +4,7 @@ import android.content.IntentFilter
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
+// Video series: https://www.youtube.com/watch?v=prueLyTvOwI&list=PLrnPJCHvNZuBqr_0AS9BPXgU6gvNeai5S
 
 class MainActivity : AppCompatActivity() {
     var orderedReceiver1: OrderedReceiver1 = OrderedReceiver1()
