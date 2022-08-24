@@ -13,6 +13,8 @@ class OrderedReceiver1 : BroadcastReceiver() {
         val resultExtras = getResultExtras(true) // makeMap rebuilds the map and ensures no nulls
         var stringExtra = resultExtras.getString("stringExtra")
 
+        // NOTE: IntentExtras cannot be modified! Modify ResultExtras instead.
+
         resultCode++ // example of modifying the resultCode
         stringExtra += "->OR1" // example of modifying the resultExtras
 

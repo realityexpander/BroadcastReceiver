@@ -31,6 +31,6 @@ class OrderedReceiver2 : BroadcastReceiver() {
         resultExtras.putString("stringExtra", stringExtra)
         setResult(resultCode, resultData, resultExtras)
 
-        //abortBroadcast()
+        //abortBroadcast()  // Shows example of how to cancel the broadcast, and its always received by the last receiver.
     }
 }
