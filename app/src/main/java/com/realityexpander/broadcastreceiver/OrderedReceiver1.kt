@@ -10,11 +10,11 @@ class OrderedReceiver1 : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         var resultCode = resultCode
         var resultData = resultData
-        val resultExtras = getResultExtras(true)
+        val resultExtras = getResultExtras(true) // makeMap rebuilds the map and ensures no nulls
         var stringExtra = resultExtras.getString("stringExtra")
 
-        resultCode++
-        stringExtra += "->OR1"
+        resultCode++ // example of modifying the resultCode
+        stringExtra += "->OR1" // example of modifying the resultExtras
 
         val toastText = """
                OR1
@@ -25,7 +25,7 @@ class OrderedReceiver1 : BroadcastReceiver() {
                """.trimIndent()
         Toast.makeText(context, toastText, Toast.LENGTH_LONG).show()
 
-        resultData = "OR1"
+        resultData = "OR1"  // example of setting result for the next receiver
         resultExtras.putString("stringExtra", stringExtra)
         setResult(resultCode, resultData, resultExtras)
     }

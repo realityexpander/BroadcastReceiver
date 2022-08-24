@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Dynamically Registered Broadcast Receiver
         val filter = IntentFilter("com.realityexpander.EXAMPLE_ACTION")
         filter.priority = 1
         registerReceiver(orderedReceiver1, filter)
