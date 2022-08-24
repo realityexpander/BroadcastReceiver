@@ -27,7 +27,6 @@ class OrderedReceiver3 : BroadcastReceiver() {
 
         Thread.sleep(500)
 
-
         resultData = "OR3"
         resultExtras.putString("stringExtra", stringExtra)
         setResult(resultCode, resultData, resultExtras)

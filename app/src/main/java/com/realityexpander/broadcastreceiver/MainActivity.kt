@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val filter = IntentFilter("com.realityexpander.EXAMPLE_ACTION")
         filter.priority = 1
         registerReceiver(orderedReceiver1, filter)
